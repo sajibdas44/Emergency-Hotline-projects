@@ -6,7 +6,75 @@
     <title>Emergency Service </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-gray-100">
+
+
+<!-- Navbar section -->
+  <nav class="flex items-center justify-between bg-white shadow px-6 py-3">
+    <div class="flex items-center space-x-2">
+      <img src="assets/logo-dark.png"
+           alt="Logo" class="h-8 w-8">
+      <span class="font-bold text-green-700 text-lg">Emergency <br>Service</span>
+    </div>
+    <div class="flex items-center space-x-4">
+      <div class="flex items-center bg-green-50 px-3 py-1 ">
+        <span id="heartCount" class="mr-1 text-black">0</span>
+        <span class="text-red-500"><img src="assets/heart.png" alt=""></span>
+      </div>
+      <div class="flex items-center bg-green-50 px-3 py-1 rounded-full">
+        <span id="coinCount" class="mr-1 text-black">100</span>
+        <span class="text-yellow-400"><img src="assets/coin.png" alt=""></span>
+      </div>
+         <button id="copyBtn" class="bg-green-600 text-white px-3 py-1 rounded-full hover:bg-green-700">
+        <span id="copyCount">2</span> Copy
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+   <section class="w-full bg-gradient-to-r from-green-900 to-green-700 text-white py-6 shadow-md">
+    <div class="flex justify-center">
+      <img src="assets/logo.png" alt="Government Logo" class="w-20 h-20 mx-auto rounded-full">
+    </div>
+    <div class="text-center">
+      <h1 class="text-3xl font-bold mt-2">Emergency Service Directory</h1>
+    </div>
+    <div class="mb-4 text-center">
+      <p class="text-sm font-medium mt-2">
+        Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh
+      </p>
+    </div>
+
+  </section>
+
+
+  <!---js script-->
+  <script src="./index.js"></script>
+  <script>
+    const heartCount = document.getElementById("heartCount");
+    const coinCount = document.getElementById("coinCount");
+    const copyBtn = document.getElementById("copyBtn");
+    const copyCount = document.getElementById("copyCount");
+
+    document.querySelectorAll("#coinCount, #copyBtn").forEach(el => {
+      el.addEventListener("click", () => {
+        heartCount.textContent = parseInt(heartCount.textContent) + 1;
+      });
+    });
+
+    copyBtn.addEventListener("click", () => {
+      copyCount.textContent = parseInt(copyCount.textContent) + 1;
+    });
+
+
+  </script>
+
+ 
+
+  
+
+
+
     
 </body>
 </html>
