@@ -42,15 +42,12 @@
   });
 
 
-
-
-
-  let coins = 100; // starting coins
+  let coins = 100; // 
 const coinCount = document.getElementById("coinCount");
 const historyList = document.getElementById("callHistory");
 const clearBtn = document.getElementById("clearHistory");
 
-// Call Button Function
+
 document.querySelectorAll(".call-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const service = btn.dataset.service;
@@ -65,14 +62,14 @@ document.querySelectorAll(".call-btn").forEach(btn => {
     coinCount.textContent = coins;
     alert(`Calling ${service} at ${number}... (-20 coins)`);
 
-    // Add to history
+    
     const li = document.createElement("li");
     li.textContent = `${service} - ${number}`;
     historyList.appendChild(li);
   });
 });
 
-// Clear History Function
+
 clearBtn.addEventListener("click", () => {
   historyList.innerHTML = "";
 });
