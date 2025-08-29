@@ -26,6 +26,10 @@
         <span id="coinCount" class="mr-1 text-black">100</span>
         <span class="text-yellow-400"><img src="assets/coin.png" alt=""></span>
       </div>
+
+    <div>
+     Coins: <span id="coinCount">100</span>
+    </div>
          <button id="copyBtn" class="bg-green-600 text-white px-3 py-1 rounded-full hover:bg-green-700">
         <span id="copyCount">2</span> Copy
       </button>
@@ -51,6 +55,7 @@
 
   <!--Main Section-->
 
+
    
 
     <div class="flex gap-6 w-full max-w-7xl">
@@ -73,6 +78,8 @@
      <p class="mt-4 text-2xl font-bold text-gray-800">999</p>
         <span class="mt-2 inline-block bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">All</span>
         <div class="mt-5 flex space-x-3">
+
+
           <button onclick="copyNumber('National Emergency Number','999')" class="flex-1 border rounded-lg py-2 flex justify-center items-center gap-2 hover:bg-gray-100"><i class="fa-regular fa-copy"></i>Copy</button>
           <button onclick="callNumber('National Emergency Number','999')" class="flex-1 bg-green-500 text-white rounded-lg py-2 flex justify-center items-center gap-2 hover:bg-green-600"><i class="fa-solid fa-phone"></i> Call</button>
         </div>
@@ -248,51 +255,75 @@
       </div>
   
     </div>
-
-
-    <!-- History Section -->
-    <div class="w-64 bg-white rounded-2xl shadow p-4">
-      <div class="flex justify-between items-center">
-        <h3 class="font-semibold text-lg"><i class="fa-solid fa-clock-rotate-left"></i> Call History</h3>
-        <button onclick="clearHistory()" class="text-sm text-red-500">Clear</button>
+    
+       <!-- History Section -->
+  <div class="w-96 bg-white rounded-lg shadow-md p-4">
+    <div class="flex justify-between items-center mb-4">
+      <div class="flex items-center space-x-2">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+        <h2 class="text-lg font-semibold text-gray-800">Call History</h2>
       </div>
-      <ul id="historyList" class="mt-4 space-y-2 text-sm text-gray-600"></ul>
+      <button id="clearHistoryBtn"
+              class="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white text-sm px-4 py-1 rounded-full transition-all">
+        Clear
+      </button>
     </div>
+    <div id="historyList" class="space-y-3">
+      <div class="flex justify-between items-center text-sm text-gray-700">
+        <div>
+          <div class="font-medium">Fire Service Number</div>
+          <div class="text-xs text-gray-500">999</div>
+        </div>
+        <div class="text-xs text-gray-400">11:36:58 AM</div>
+      </div>
+
+    <div class="flex justify-between items-center text-sm text-gray-700">
+      <div>
+          <div class="font-medium">National Emergency Number</div>
+          <div class="text-xs text-gray-500">1994-999999</div>
+        </div>
+        <div class="text-xs text-gray-400">11:36:58 AM</div>
+      </div>
+
+       <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+        <div>
+          <div class="text-sm font-medium text-gray-900">Fire Service Number</div>
+          <div class="text-xs text-gray-500">999</div>
+          </div>
+        <div class="text-xs text-gray-400">11:36:58 AM</div>
+      </div>
+
+      <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+      <div>
+        <div class="text-sm font-medium text-gray-900">Bangladesh Railway Helpline</div>
+        <div class="text-xs text-gray-500">999</div>
+        </div>
+        <div class="text-xs text-gray-400">11:36:58 AM</div>
+      </div>
+
+      <div class="flex justify-between items-center text-sm text-gray-700">
+      <div>
+      <div class="font-medium">Fire Service Number</div>
+      <div class="text-xs text-gray-500">999</div>
+     </div>
+      <div class="text-xs text-gray-400">11:36:58 AM</div>
+      </div>
+      <div class="flex justify-between items-center text-sm text-gray-700">
+        <div>
+      <div class="font-medium">Anti-Corruption Helpline</div>
+      <div class="text-xs text-gray-500">106</div>
+        </div>
+      <div class="text-xs text-gray-400">11:36:58 AM</div> 
   </div>
+</div>
 
-  
-
-      
-
-
+    
 
 
 
   <!---js script-->
   <script src="./index.js"></script>
-  <script>
-    const heartCount = document.getElementById("heartCount");
-    const coinCount = document.getElementById("coinCount");
-    const copyBtn = document.getElementById("copyBtn");
-    const copyCount = document.getElementById("copyCount");
-
-    document.querySelectorAll("#coinCount, #copyBtn").forEach(el => {
-      el.addEventListener("click", () => {
-        heartCount.textContent = parseInt(heartCount.textContent) + 1;
-      });
-    });
-
-    copyBtn.addEventListener("click", () => {
-      copyCount.textContent = parseInt(copyCount.textContent) + 1;
-    });
-
-
-  </script>
-
- 
-
   
-
 
 
     
